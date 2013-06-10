@@ -1,0 +1,12 @@
+import os
+import glob
+
+CLIB_HOME = os.environ['CLIB_HOME']
+
+cpppath = CLIB_HOME + '/include'
+libpath = CLIB_HOME + '/lib'
+
+Program('target/pocosharedptr', glob.glob('pocosharedptr/*.cpp'), CPPPATH = [cpppath, 'include'], LIBPATH = [libpath], LIBS = ['PocoFoundation'], CCFLAGS = [])
+Program('target/pocohttptimeserver', glob.glob('pocohttpserver/*.cpp'), CPPPATH = [cpppath, 'include'], LIBPATH = [libpath], LIBS = ['PocoFoundation', 'PocoNet', 'PocoUtil'], CCFLAGS = [])
+
+
