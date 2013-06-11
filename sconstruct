@@ -8,5 +8,9 @@ libpath = CLIB_HOME + '/lib'
 
 Program('target/pocosharedptr', glob.glob('pocosharedptr/*.cpp'), CPPPATH = [cpppath, 'include'], LIBPATH = [libpath], LIBS = ['PocoFoundation'], CCFLAGS = [])
 Program('target/pocohttptimeserver', glob.glob('pocohttpserver/*.cpp'), CPPPATH = [cpppath, 'include'], LIBPATH = [libpath], LIBS = ['PocoFoundation', 'PocoNet', 'PocoUtil'], CCFLAGS = [])
+Program('target/pocoreactorserver', glob.glob('pocoreactorserver/*.cpp'), CPPPATH = [cpppath, 'include'], LIBPATH = [libpath], LIBS = ['PocoFoundation', 'PocoNet', 'PocoUtil'], CCFLAGS = [])
+Program('target/tbbconqueue_oneputmultiget', glob.glob('tbbconqueue/conqueue_oneputmultiget.cpp'), CPPPATH = [cpppath, 'include'], LIBPATH = [libpath], LIBS = ['PocoFoundation', 'PocoNet', 'PocoUtil', 'tbb'], CCFLAGS = [])
+Program('target/tbbconqueue_multiputoneget', glob.glob('tbbconqueue/conqueue_multiputoneget.cpp'), CPPPATH = [cpppath, 'include'], LIBPATH = [libpath], LIBS = ['PocoFoundation', 'PocoNet', 'PocoUtil', 'tbb'], CCFLAGS = [])
+Program('target/tbbpipeline', glob.glob('tbbpipeline/*.cpp'), CPPPATH = [cpppath, 'include'], LIBPATH = [libpath], LIBS = ['PocoFoundation', 'PocoNet', 'PocoUtil', 'tbb'], CCFLAGS = [])
 
 
